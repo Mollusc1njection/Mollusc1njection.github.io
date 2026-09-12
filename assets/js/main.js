@@ -11,16 +11,14 @@ if (navToggle && navLinks){
   });
 }
 
-// ---------------------------------------------------------
-// Efecto de terminal en el hero (solo en index.html)
-// ---------------------------------------------------------
+
 const term = document.getElementById("termBody");
 if (term){
   const script = [
     { type: "cmd", text: "whoami" },
-    { type: "out", text: "Tu Nombre Apellido — Ingeniería de Ciberseguridad" },
+    { type: "out", text: "sebastian" },
     { type: "cmd", text: "cat resumen.txt" },
-    { type: "out", text: "[EDITAR] Breve resumen de 1-2 líneas sobre tu enfoque\n(red team, CTF, pentesting, etc.)" },
+    { type: "out", text: "¡Bienvenido a mi pagina! Preparate Hacker, porque veras muchas cosas interesantes en esta pagina" },
     { type: "cmd", text: "ls certs/ | wc -l" },
     { type: "out", text: "[N] certificaciones activas — ver abajo ↓" },
   ];
@@ -69,11 +67,7 @@ if (term){
   }
 }
 
-// ---------------------------------------------------------
-// Reveal on scroll: mismo lenguaje de animación en todas las páginas.
-// Progressive enhancement: si JS no corre, el contenido queda visible
-// normal (los estilos "ocultos" se aplican por JS, no por CSS).
-// ---------------------------------------------------------
+
 function setupReveal(selector){
   const els = document.querySelectorAll(selector);
   if (!els.length) return;
@@ -108,11 +102,7 @@ function setupReveal(selector){
   ".proj-card",
   ".contact-list li"
 ].forEach(setupReveal);
-// .wu-row se activa más abajo, después de generarse dinámicamente
 
-// ---------------------------------------------------------
-// Render del listado de writeups (solo en writeups.html)
-// ---------------------------------------------------------
 const wuList = document.getElementById("wuList");
 if (wuList && typeof WRITEUPS !== "undefined"){
   const sorted = [...WRITEUPS].sort((a, b) => new Date(b.date) - new Date(a.date));
