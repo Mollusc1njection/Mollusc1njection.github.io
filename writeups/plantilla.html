@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Título del writeup] — Tu Nombre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  /* Estilos propios de la página de writeup (reporte técnico) */
+  .post-head{ padding:44px 0 24px; }
+  .post-meta{ font-family:var(--mono); font-size:0.8rem; color:var(--muted); margin:10px 0 0; }
+  .post-body{ padding:0 0 60px; }
+  .post-body h2{ font-size:1.2rem; margin:34px 0 12px; padding-top:16px; border-top:1px solid var(--line); }
+  .post-body h2:first-child{ border-top:none; padding-top:0; margin-top:0; }
+  .post-body p{ color:var(--text); }
+  .post-body pre{
+    background:var(--panel); border:1px solid var(--line); border-radius:6px;
+    padding:14px 16px; overflow-x:auto; font-family:var(--mono); font-size:0.85rem;
+    color:var(--accent);
+  }
+  .post-body code{ font-family:var(--mono); font-size:0.88em; color:var(--amber); }
+  .post-body img{ max-width:100%; border-radius:6px; border:1px solid var(--line); }
+  .back-link{ font-family:var(--mono); font-size:0.85rem; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> tunombre@ciberseguridad:~$</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../certificaciones.html">certs</a></li>
+      <li><a href="../logros.html">logros</a></li>
+      <li><a href="../proyectos.html">proyectos</a></li>
+      <li><a href="../writeups.html">writeups</a></li>
+      <li><a href="../contacto.html">contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="post-head wrap">
+  <a class="back-link" href="../writeups.html">← volver a writeups</a>
+  <h1 class="hero-title" style="margin-top:14px;">[Título del writeup, ej: HTB - Forest]</h1>
+  <p class="post-meta">
+    [2026-01-15] &nbsp;·&nbsp; Dificultad: [Fácil/Media/Difícil] &nbsp;·&nbsp;
+    Tags: ActiveDirectory, PrivEsc
+  </p>
+</header>
+
+<article class="post-body wrap">
+
+  <h2>Reconocimiento</h2>
+  <p>[Describe el escaneo inicial: nmap, servicios encontrados, etc.]</p>
+  <pre>nmap -sC -sV -oN scan.txt 10.10.10.10</pre>
+
+  <h2>Enumeración</h2>
+  <p>[Qué encontraste al enumerar los servicios: usuarios, shares, endpoints, etc.]</p>
+
+  <h2>Explotación</h2>
+  <p>[Cómo obtuviste el acceso inicial. Incluye comandos y capturas si aplica.]</p>
+
+  <h2>Escalada de privilegios</h2>
+  <p>[Cómo llegaste a root/SYSTEM/admin.]</p>
+
+  <h2>Lecciones aprendidas</h2>
+  <p>[Qué te llevas de esta máquina/reto: técnica nueva, herramienta, error a evitar.]</p>
+
+</article>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> Tu Nombre. Construido con HTML, CSS y JS puro — sin frameworks.
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
