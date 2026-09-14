@@ -59,51 +59,8 @@
   <div class="wrap post-layout">
 
     <article class="post-body">
-
-      <!-- ============================================================
-           OPCIÓN A: escribir el writeup directo en HTML (control total)
-           ============================================================ -->
-      <h2>Reconocimiento</h2>
-      <p>[Describe el escaneo inicial: nmap, servicios encontrados, etc.]</p>
-      <pre>nmap -sC -sV -oN scan.txt 10.10.10.10</pre>
-
-      <h2>Enumeración</h2>
-      <p>[Qué encontraste al enumerar los servicios: usuarios, shares, endpoints, etc.]</p>
-
-      <h2>Explotación</h2>
-      <p>[Cómo obtuviste el acceso inicial. Incluye comandos y capturas si aplica.]</p>
-
-      <h2>Escalada de privilegios</h2>
-      <p>[Cómo llegaste a root/SYSTEM/admin.]</p>
-
-      <h2>Lecciones aprendidas</h2>
-      <p>[Qué te llevas de esta máquina/reto: técnica nueva, herramienta, error a evitar.]</p>
-
-      <!-- ============================================================
-           OPCIÓN B: incrustar un PDF (ej. exportado desde Obsidian)
-           1. Sube tu PDF a writeups/pdfs/tu-archivo.pdf
-           2. Borra el bloque de arriba (h2/p/pre) si vas a usar solo el PDF
-           3. Descomenta esto y cambia la ruta del src
-           ============================================================ -->
-      <!--
-      <div class="pdf-embed">
-        <iframe src="pdfs/tu-archivo.pdf" title="Writeup en PDF"></iframe>
-        <p class="pdf-fallback">
-          Si no se ve el PDF, <a href="pdfs/tu-archivo.pdf" target="_blank">ábrelo directo aquí</a>.
-        </p>
-      </div>
-      -->
-
-      <!-- ============================================================
-           OPCIÓN C: renderizar un .md exportado de Obsidian tal cual
-           1. Exporta tu nota de Obsidian como .md
-           2. Súbela a writeups/md/tu-archivo.md (imágenes en la misma carpeta)
-           3. Agrega <script src="marked"> ANTES de main.js (ver abajo)
-           4. Descomenta este div y cambia data-md-src
-           ============================================================ -->
-      <!--
-      <div class="md-content" data-md-src="md/tu-archivo.md"></div>
-      -->
+   
+      <div class="md-content" data-md-src="md/boardlight.md"></div>
 
     </article>
 
@@ -121,8 +78,7 @@
   </div>
 </footer>
 
-<!-- Solo necesario si usas la OPCIÓN C (Markdown/Obsidian) de arriba -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+ <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
 
 <script src="../assets/js/main.js"></script>
 </body>
