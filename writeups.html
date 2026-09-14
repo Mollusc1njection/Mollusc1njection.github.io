@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writeups — Tu Nombre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> Mollusc1njection@ciberseguridad:~$</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">inicio</a></li>
+      <li><a href="certificaciones.html">certs</a></li>
+      <li><a href="logros.html">logros</a></li>
+      <li><a href="proyectos.html">proyectos</a></li>
+      <li><a href="writeups.html">writeups</a></li>
+      <li><a href="contacto.html">contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero wrap" style="padding-bottom:10px;">
+  <p class="section-tag">// bitácora</p>
+  <h1 class="hero-title" style="margin-top:0;">Writeups</h1>
+  <p style="color:var(--muted); max-width:60ch;">
+    Máquinas de HTB/TryHackMe, retos de CTF y análisis de vulnerabilidades.
+    Cada entrada es un archivo HTML independiente dentro de <code>/writeups/</code>.
+  </p>
+</header>
+
+<section style="border-top:none; padding-top:10px;">
+  <div class="wrap">
+    <div class="wu-grid" id="wuList">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span>  Mollusc1njection. Some rights reserved.
+  </div>
+</footer>
+
+<script src="assets/js/writeups-data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
