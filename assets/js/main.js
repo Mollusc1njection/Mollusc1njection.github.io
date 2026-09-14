@@ -1,7 +1,5 @@
-// Año en el footer
 document.querySelectorAll("#year").forEach(el => el.textContent = new Date().getFullYear());
 
-// Menú móvil
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 if (navToggle && navLinks){
@@ -139,11 +137,7 @@ if (wuList && typeof WRITEUPS !== "undefined"){
   }
 }
 
-// ---------------------------------------------------------
-// Página de writeup: tabla de contenidos automática
-// Escanea los h2/h3 dentro de .post-body (o .md-content una vez
-// cargado) y arma el índice solo — no hay que escribirlo a mano.
-// ---------------------------------------------------------
+
 function buildToc(){
   const toc = document.getElementById("postToc");
   const body = document.querySelector(".post-body");
@@ -152,8 +146,7 @@ function buildToc(){
   const headings = body.querySelectorAll("h2, h3");
   const asideEl = toc.closest(".post-toc");
   if (!headings.length){
-    // Puede que el contenido (ej. Markdown) todavía no haya cargado.
-    // Se oculta sin quitarla del DOM, para poder rellenarla después.
+
     if (asideEl) asideEl.style.display = "none";
     return;
   }
@@ -194,11 +187,7 @@ function buildToc(){
 }
 buildToc();
 
-// ---------------------------------------------------------
-// Renderiza un .md (ej. exportado de Obsidian) dentro de
-// <div class="md-content" data-md-src="archivo.md"></div>
-// Requiere que la página cargue marked.js antes de main.js.
-// ---------------------------------------------------------
+
 document.querySelectorAll("[data-md-src]").forEach(async (el) => {
   const src = el.getAttribute("data-md-src");
   el.innerHTML = `<p class="md-loading">Cargando ${src}…</p>`;
